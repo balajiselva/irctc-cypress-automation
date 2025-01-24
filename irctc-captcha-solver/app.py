@@ -73,5 +73,9 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
 
+    # Use argparse values or default values
+    host = args.host or "0.0.0.0"
+    port = args.port or 5000
+
     # Run Flask server
-    app.run(host=args.host, port=args.port)
+    app.run(host=host, port=port)
